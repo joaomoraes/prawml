@@ -43,13 +43,13 @@ module Prawml
           :page_layout => :portrait
         }.merge options
 
-        template = @options[:template]
-        @options.delete(:template)
+        template_img = @options.delete(:template_img)
+        
 	
         @pdf = Prawn::Document.new @options
 
-        unless template.nil?
-          draw_image template[:path], [template[:x], template[:y], {:width => template[:width], :height => template[:height]}]
+        unless template_img.nil?
+          draw_image template_img[:path], [template_img[:x], template_img[:y], {:width => template_img[:width], :height => template_img[:height]}]
         end
     end
 

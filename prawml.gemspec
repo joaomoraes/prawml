@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Prawml::VERSION
 
-  gem.add_dependency "prawn"
+  gem.add_dependency "prawn", "~> 0.13.2"
   gem.add_dependency "barby"
   gem.add_dependency "activesupport", "~> 3.0"
 end
